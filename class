@@ -1,0 +1,66 @@
+#include <iostream>
+using namespace std;
+class student{
+    private:
+    char name[40];
+    char rollnumber[30];
+    float cgpa;
+    char bloodgroup;
+    public:
+    void display();
+    void input();
+    
+};
+void student:: input()
+{
+
+   
+    
+        cout<<"Enter the name ";
+        cin>> name;
+        cout<<"Enter the rollnumber";
+        cin>> rollnumber;
+        cout<<"Enter cgpa";
+        cin>> cgpa;
+        cout<<"Enter the bloodgroup";
+        cin>> bloodgroup;
+    
+    
+}
+void student :: display()
+{
+   
+    
+    
+      cout<<"name : "<< name<<"\n";
+      cout<<"Rollnumber: "<<rollnumber<<"\n";
+      cout<<"Cgpa : "<<cgpa<<"\n";
+      cout<<"Bloodgroup : "<<bloodgroup<<"\n";
+        
+       
+    
+}
+
+int main() {
+    int n,i;
+    student students[n];
+    cout <<"enter the number of students "<<"\n";
+    cin >>n;
+
+    
+    for(i=0;i<n;i++)
+    {
+        cout<<"enter details of students"<<"\n";
+        students[i].input();
+        
+    }
+    for(i=0;i<n;i++)
+    {
+        cout<<"Printing student details"<<"\n";
+        students[i].display();
+    }
+ 
+
+
+    return 0;
+}
